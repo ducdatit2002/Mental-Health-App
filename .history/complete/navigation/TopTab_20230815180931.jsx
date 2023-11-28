@@ -174,8 +174,8 @@ const TopTab = ({ navigation }) => {
         </View>
       </View>
       <Tab.Navigator>
-        {/* <Tab.Screen name="Bookings" component={TopBookings} />
-        <Tab.Screen name="Trips" component={TopTrips} /> */}
+        <Tab.Screen name="Bookings" component={TopBookings} />
+        <Tab.Screen name="Trips" component={TopTrips} />
         <Tab.Screen name="Info" component={TopInfo} />
       </Tab.Navigator>
     </View>
