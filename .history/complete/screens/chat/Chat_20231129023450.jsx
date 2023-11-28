@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ScrollView, View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 // StatusPost Component
 const StatusPost = ({ avatar, name, time, status }) => {
@@ -32,30 +32,15 @@ const StatusPost = ({ avatar, name, time, status }) => {
 const Chat = ({ title, content }) => {
   const [selectedSegmentIndex, setSelectedSegmentIndex] = useState(0);
 
-  const statusPostData = [
-  {
-    avatar: "https://scontent.fsgn16-1.fna.fbcdn.net/v/t1.6435-9/82491219_1311242152395259_3382338697524412416_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7a1959&_nc_ohc=mmLy1KC8V-kAX-pSbYa&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfBkz4mF_VI6l1x1sULPlldLmH1NE4HAB3emXhu2h7fpUQ&oe=658D97ED",
-    name: "Luân Nguyễn",
+  const statusPostData = [{
+    avatar: "https://placekitten.com/200/200",
+    name: "Minh Đức",
     time: "1 hour ago",
     status: "Có biện pháp nào giảm căng thẳng trong mùa thi cử không?",
-  },
-  {
-    avatar: "https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/336152242_1798787447183497_7036806404262520228_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=CTT8OaOXAfsAX_6-bF7&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDP4dVnS8XoMcx_Gz0em46QpQxrIaxZGuF-uiXuLzb_wQ&oe=656B5B69",
-    name: "Thảo My Nguyễn",
-    time: "now",
-    status: "Có cách nào để duy trì tinh thần tích cực và quản lý căng thẳng hàng ngày khi đang điều trị rồi loạn lo âu?",
-  },
-  {
-    avatar: "https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/395262669_3699448450331111_5790569208642926732_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=pW1waWaRCpcAX-g7xb7&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDdQmm-f7SNUuBwdOH7VIxVYoOZ6sVIdQQp2qMntJpSzQ&oe=656B19BC",
-    name: "Đạt Phạm",
-    time: "4 hour ago",
-    status: "Có cách nào để duy trì tinh thần tích cực và giảm lo âu không?",
-  },
-  
-];
+  };
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       {/* Chat Section */}
       <Text style={styles.title}>{title}</Text>
       <Text>{content}</Text>
@@ -85,16 +70,13 @@ const Chat = ({ title, content }) => {
         ))}
       </View>
       {/* Status Post Section */}
-      {statusPostData.map((postData, index) => (
-        <StatusPost
-          key={index}
-          avatar={postData.avatar}
-          name={postData.name}
-          time={postData.time}
-          status={postData.status}
-        />
-      ))}
-    </ScrollView>
+      <StatusPost
+        avatar={statusPostData.avatar}
+        name={statusPostData.name}
+        time={statusPostData.time}
+        status={statusPostData.status}
+      />
+    </View>
   );
 };
 

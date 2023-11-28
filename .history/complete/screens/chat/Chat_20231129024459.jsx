@@ -35,7 +35,7 @@ const Chat = ({ title, content }) => {
   const statusPostData = [
   {
     avatar: "https://scontent.fsgn16-1.fna.fbcdn.net/v/t1.6435-9/82491219_1311242152395259_3382338697524412416_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7a1959&_nc_ohc=mmLy1KC8V-kAX-pSbYa&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfBkz4mF_VI6l1x1sULPlldLmH1NE4HAB3emXhu2h7fpUQ&oe=658D97ED",
-    name: "Luân Nguyễn",
+    name: "Nguyễn Hoàng Luân",
     time: "1 hour ago",
     status: "Có biện pháp nào giảm căng thẳng trong mùa thi cử không?",
   },
@@ -47,9 +47,9 @@ const Chat = ({ title, content }) => {
   },
   {
     avatar: "https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/395262669_3699448450331111_5790569208642926732_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=pW1waWaRCpcAX-g7xb7&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDdQmm-f7SNUuBwdOH7VIxVYoOZ6sVIdQQp2qMntJpSzQ&oe=656B19BC",
-    name: "Đạt Phạm",
-    time: "4 hour ago",
-    status: "Có cách nào để duy trì tinh thần tích cực và giảm lo âu không?",
+    name: "Minh Đức",
+    time: "1 hour ago",
+    status: "Có biện pháp nào giảm căng thẳng trong mùa thi cử không?",
   },
   
 ];

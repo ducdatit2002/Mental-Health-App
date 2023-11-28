@@ -48,8 +48,8 @@ const Chat = ({ title, content }) => {
   {
     avatar: "https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/395262669_3699448450331111_5790569208642926732_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=pW1waWaRCpcAX-g7xb7&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDdQmm-f7SNUuBwdOH7VIxVYoOZ6sVIdQQp2qMntJpSzQ&oe=656B19BC",
     name: "Đạt Phạm",
-    time: "4 hour ago",
-    status: "Có cách nào để duy trì tinh thần tích cực và giảm lo âu không?",
+    time: "1 hour ago",
+    status: "Có biện pháp nào giảm căng thẳng trong mùa thi cử không?",
   },
   
 ];
