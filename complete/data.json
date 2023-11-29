@@ -1,0 +1,78 @@
+{
+  "recommendations": [
+    {
+      "_id": "1",
+      "title": "Short Survey 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod.",
+      "imageUrl": "https://media.istockphoto.com/id/1039434224/vector/checklist-icon.jpg?s=612x612&w=0&k=20&c=sBcHmAoFX_pVHYbxtyNuLSY-dLMoap0tSHyG4gyn_3k=",
+      "rating": 4.5,
+      "review": 120,
+      "question": "Question 1",
+      "options": ["Option 1", "Option 2", "Option 3"]
+    },
+    {
+      "_id": "2",
+      "title": "Short Survey 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod.",
+      "imageUrl": "https://media.istockphoto.com/id/1039434224/vector/checklist-icon.jpg?s=612x612&w=0&k=20&c=sBcHmAoFX_pVHYbxtyNuLSY-dLMoap0tSHyG4gyn_3k=",
+      "rating": 4.7,
+      "review": 95,
+      "question": "Question 1",
+      "options": ["Option 1", "Option 2", "Option 3"]
+    },
+    {
+      "_id": "3",
+      "title": "Short Survey 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod.",
+      "imageUrl": "https://media.istockphoto.com/id/1039434224/vector/checklist-icon.jpg?s=612x612&w=0&k=20&c=sBcHmAoFX_pVHYbxtyNuLSY-dLMoap0tSHyG4gyn_3k=",
+      "rating": 4.2,
+      "review": 180,
+      "question": "Question 1",
+      "options": ["Option 1", "Option 2", "Option 3"]
+    }
+  ],
+  "activities": [
+    {
+      "_id": "1",
+      "title": "Tâm trạng",
+      "imageUrl": "https://media.istockphoto.com/id/1039434224/vector/checklist-icon.jpg?s=612x612&w=0&k=20&c=sBcHmAoFX_pVHYbxtyNuLSY-dLMoap0tSHyG4gyn_3k=",
+      "location": "lorem",
+      "rating": 4.5
+    },
+    {
+      "_id": "2",
+      "title": "Giấc ngủ",
+      "imageUrl": "https://media.istockphoto.com/id/1039434224/vector/checklist-icon.jpg?s=612x612&w=0&k=20&c=sBcHmAoFX_pVHYbxtyNuLSY-dLMoap0tSHyG4gyn_3k=",
+      "location": "lorem",
+      "rating": 4.7
+    },
+    {
+      "_id": "3",
+      "title": "Xã hội",
+      "imageUrl": "https://media.istockphoto.com/id/1039434224/vector/checklist-icon.jpg?s=612x612&w=0&k=20&c=sBcHmAoFX_pVHYbxtyNuLSY-dLMoap0tSHyG4gyn_3k=",
+      "location": "lorem",
+      "rating": 4.2
+    },
+    {
+      "_id": "4",
+      "title": "Đối phó tập trung",
+      "imageUrl": "https://media.istockphoto.com/id/1039434224/vector/checklist-icon.jpg?s=612x612&w=0&k=20&c=sBcHmAoFX_pVHYbxtyNuLSY-dLMoap0tSHyG4gyn_3k=",
+      "location": "lorem",
+      "rating": 4.5
+    },
+    {
+      "_id": "5",
+      "title": "Sức khoẻ",
+      "imageUrl": "https://media.istockphoto.com/id/1039434224/vector/checklist-icon.jpg?s=612x612&w=0&k=20&c=sBcHmAoFX_pVHYbxtyNuLSY-dLMoap0tSHyG4gyn_3k=",
+      "location": "lorem",
+      "rating": 4.7
+    },
+    {
+      "_id": "6",
+      "title": "Dinh dưỡng",
+      "imageUrl": "https://media.istockphoto.com/id/1039434224/vector/checklist-icon.jpg?s=612x612&w=0&k=20&c=sBcHmAoFX_pVHYbxtyNuLSY-dLMoap0tSHyG4gyn_3k=",
+      "location": "lorem",
+      "rating": 4.2
+    }
+  ]
+}

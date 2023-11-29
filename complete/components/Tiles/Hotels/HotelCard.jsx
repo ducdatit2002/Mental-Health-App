@@ -1,12 +1,12 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React from "react";
-import { COLORS, SIZES, TEXT } from "../../../constants/theme";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import React from "react"
+import { COLORS, SIZES, TEXT } from "../../../constants/theme"
 import {
   HeightSpacer,
   NetworkImage,
   Rating,
   ReusableText,
-} from "../../../components/index";
+} from "../../../components/index"
 
 const HotelCard = ({ item, margin, onPress }) => {
   return (
@@ -42,19 +42,19 @@ const HotelCard = ({ item, margin, onPress }) => {
 
           <HeightSpacer height={5} />
 
-          <Rating rating={item.rating} />
+          {/* <Rating rating={item.rating} /> */}
         </View>
       </View>
     </TouchableOpacity>
-  );
-};
+  )
+}
 
-export default HotelCard;
+export default HotelCard
 
 const styles = StyleSheet.create({
   card: (margin) => ({
     width: SIZES.width / 2.2,
-    height: SIZES.height/3.8,
+    height: SIZES.height / 3.8,
     borderRadius: 16,
     backgroundColor: COLORS.lightWhite,
     marginRight: margin,
@@ -62,6 +62,6 @@ const styles = StyleSheet.create({
   imageContainer: {
     alignItems: "center",
     marginTop: 10,
-    height: SIZES.height/6.6,
+    height: SIZES.height / 6.6,
   },
-});
+})

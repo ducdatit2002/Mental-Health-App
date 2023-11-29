@@ -1,5 +1,5 @@
-import { View, Alert, ScrollView, TouchableOpacity } from "react-native";
-import React from "react";
+import { View, Alert, ScrollView, TouchableOpacity } from "react-native"
+import React from "react"
 import {
   AppBar,
   AssetImage,
@@ -11,48 +11,51 @@ import {
   ReusableBtn,
   ReusableText,
   ReviewsList,
-} from "../../components";
-import { COLORS, SIZES } from "../../constants/theme";
-import styles from "./hotelDetails.style";
-import reusable from "../../components/Reusable/reusable.style";
-import { Rating } from "react-native-stock-star-rating";
-import { Feather } from "@expo/vector-icons";
-import { useRoute } from "@react-navigation/native";
-import fetchHotelById from "../../hook/fetchHotelById";
-import { ActivityIndicator } from "react-native-paper";
-import checkUser from "../../hook/checkUser";
-import Loader from "../../components/Shimmers/Loader";
+} from "../../components"
+import { COLORS, SIZES } from "../../constants/theme"
+import styles from "./hotelDetails.style"
+import reusable from "../../components/Reusable/reusable.style"
+import { Rating } from "react-native-stock-star-rating"
+import { Feather } from "@expo/vector-icons"
+import { useRoute } from "@react-navigation/native"
+// import fetchHotelById from "../../hook/fetchHotelById"
+import data from "../../data.json"
+import { ActivityIndicator } from "react-native-paper"
+import checkUser from "../../hook/checkUser"
+import Loader from "../../components/Shimmers/Loader"
 
 const HotelDetails = ({ navigation }) => {
-  const { userLogin } = checkUser();
-  const router = useRoute();
-  const id = router.params;
+  const { userLogin } = checkUser()
+  const router = useRoute()
+  const id = router.params
 
-  const { hotel, coordinates, isLoading, error, refetch } = fetchHotelById(id);
+  // const { hotel, coordinates, isLoading, error, refetch } = fetchHotelById(id)
 
-  const handleReviews = () => {
-    if (userLogin) {
-      navigation.navigate("AddReviews", id);
-    } else {
-      Alert.alert("Auth Error", "Please login to add comments", [
-        {
-          text: "Cancel",
-          onPress: () => {},
-        },
-        {
-          text: "Continue",
-          onPress: () => {navigation.navigate('AuthTop')},
-        },
-        { defaultIndex: 1 },
-      ]);
-    }
-  };
+  // const handleReviews = () => {
+  //   if (userLogin) {
+  //     navigation.navigate("AddReviews", id)
+  //   } else {
+  //     Alert.alert("Auth Error", "Please login to add comments", [
+  //       {
+  //         text: "Cancel",
+  //         onPress: () => {},
+  //       },
+  //       {
+  //         text: "Continue",
+  //         onPress: () => {
+  //           navigation.navigate("AuthTop")
+  //         },
+  //       },
+  //       { defaultIndex: 1 },
+  //     ])
+  //   }
+  // }
 
-  if (isLoading) {
-    return (
-      <Loader />
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <Loader />
+  //   );
+  // }
 
   return (
     <ScrollView>
@@ -61,19 +64,19 @@ const HotelDetails = ({ navigation }) => {
           top={50}
           left={20}
           right={20}
-          title={hotel.title}
+          title={data.recommendations.title}
           color={COLORS.white}
           icon={"message1"}
           color1={COLORS.white}
           onPress={() => navigation.goBack()}
-          onPress1={handleReviews}
+          // onPress1={handleReviews}
         />
       </View>
 
       <View>
         <View style={styles.container}>
           <NetworkImage
-            source={hotel.imageUrl}
+            source={data.recommendations.imageUrl}
             width={"100%"}
             height={220}
             radius={25}
@@ -82,7 +85,7 @@ const HotelDetails = ({ navigation }) => {
           <View style={styles.titleContainer}>
             <View style={styles.titleColumn}>
               <ReusableText
-                text={hotel.title}
+                text={data.recommendations.title}
                 family={"medium"}
                 size={SIZES.xLarge}
                 color={COLORS.black}
@@ -90,7 +93,7 @@ const HotelDetails = ({ navigation }) => {
 
               <HeightSpacer height={10} />
               <ReusableText
-                text={hotel.location}
+                text={data.recommendations.location}
                 family={"medium"}
                 size={SIZES.medium}
                 color={COLORS.black}
@@ -101,13 +104,13 @@ const HotelDetails = ({ navigation }) => {
               <View style={reusable.rowWithSpace("space-between")}>
                 <Rating
                   maxStars={5}
-                  stars={hotel.rating}
+                  stars={data.recommendations.rating}
                   bordered={false}
                   color={"#FD9942"}
                 />
 
                 <ReusableText
-                  text={`(${hotel.review})`}
+                  text={`(${data.recommendations.review})`}
                   family={"medium"}
                   size={SIZES.medium}
                   color={COLORS.gray}
@@ -127,26 +130,26 @@ const HotelDetails = ({ navigation }) => {
 
           <HeightSpacer height={10} />
 
-          <DescriptionText text={hotel.description} />
+          <DescriptionText text={data.recommendations.description} />
 
           <HeightSpacer height={10} />
 
-          <ReusableText
+          {/* <ReusableText
             text={"Location"}
             family={"medium"}
             size={SIZES.large}
             color={COLORS.black}
-          />
+          /> */}
 
-          <HeightSpacer height={15} />
+          {/* <HeightSpacer height={15} /> */}
 
           <ReusableText
-            text={hotel.location}
+            text={data.recommendations.location}
             family={"regular"}
             size={SIZES.small + 2}
             color={COLORS.gray}
           />
-          <HotelMap coordinates={coordinates} />
+          {/* <HotelMap coordinates={coordinates} /> */}
 
           <View style={reusable.rowWithSpace("space-between")}>
             <ReusableText
@@ -165,12 +168,13 @@ const HotelDetails = ({ navigation }) => {
 
           <HeightSpacer height={10} />
 
-          <ReviewsList reviews={hotel.reviews} />
+          <ReviewsList reviews={data.recommendations.reviews} />
         </View>
-        <View style={[reusable.rowWithSpace("space-between"), styles.bottom]}>
+
+        {/* <View style={[reusable.rowWithSpace("space-between"), styles.bottom]}>
           <View>
             <ReusableText
-              text={`\$ ${hotel.price}`}
+              text={`\$ ${data.recommendations.price}`}
               family={"medium"}
               size={SIZES.large}
               color={COLORS.black}
@@ -194,10 +198,10 @@ const HotelDetails = ({ navigation }) => {
             borderWidth={0}
             textColor={COLORS.white}
           />
-        </View>
+        </View> */}
       </View>
     </ScrollView>
-  );
-};
+  )
+}
 
-export default HotelDetails;
+export default HotelDetails

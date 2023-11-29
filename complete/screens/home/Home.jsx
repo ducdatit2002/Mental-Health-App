@@ -46,7 +46,7 @@ const Home = ({ navigation }) => {
 
         <View style={[reusable.rowWithSpace("space-between")]}>
           <ReusableText
-            text={"Recommendations"}
+            text={"Short Survey"}
             family={"medium"}
             size={TEXT.large}
             color={COLORS.black}
@@ -60,6 +60,24 @@ const Home = ({ navigation }) => {
         <Recommendations />
 
         <HeightSpacer height={30} />
+
+        <View
+          style={[
+            reusable.rowWithSpace("space-between"),
+            { paddingBottom: 10 },
+          ]}
+        >
+          <ReusableText
+            text={"Activities"}
+            family={"medium"}
+            size={TEXT.large}
+            color={COLORS.black}
+          />
+
+          <TouchableOpacity onPress={() => navigation.navigate("HotelList")}>
+            <Feather name="list" size={20} />
+          </TouchableOpacity>
+        </View>
 
         <BestHotels />
       </View>

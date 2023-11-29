@@ -9,8 +9,8 @@ import React from "react"
 import { useNavigation } from "@react-navigation/native"
 import { SIZES } from "../../constants/theme"
 // import fetchRecommendations from "../../hook/fetchRecommendations"s
-import data from "./data.json"
-import HorizontalShimmer from "../Shimmers/HorizontalShimmer"
+import data from "../../data.json"
+// import HorizontalShimmer from "../Shimmers/HorizontalShimmer"
 import ReusableTile from "../Reusable/ReusableTile"
 
 const Recommendations = () => {
