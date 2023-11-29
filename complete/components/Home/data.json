@@ -1,0 +1,28 @@
+{
+  "recommendations": [
+    {
+      "_id": "1",
+      "title": "Sunny Beach Resort",
+      "description": "A beautiful seaside resort with stunning views and excellent amenities.",
+      "image": "url_to_image1.jpg",
+      "rating": 4.5,
+      "reviews": 120
+    },
+    {
+      "_id": "2",
+      "title": "Mountain Escape",
+      "description": "A cozy retreat in the heart of the mountains, perfect for a relaxing getaway.",
+      "image": "url_to_image2.jpg",
+      "rating": 4.7,
+      "reviews": 95
+    },
+    {
+      "_id": "3",
+      "title": "Urban Adventure Hotel",
+      "description": "A modern hotel located in the city center, close to major attractions and shopping districts.",
+      "image": "url_to_image3.jpg",
+      "rating": 4.2,
+      "reviews": 180
+    }
+  ]
+}
