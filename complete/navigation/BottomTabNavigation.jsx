@@ -5,6 +5,7 @@ import { Home, Chat, Location } from "../screens";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../constants/theme";
 import TopTab from "./TopTab";
+import Daily from "../screens/daily/Daily";
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +21,6 @@ const tabBarStyle = {
 };
 
 const BottomTabNavigation = () => {
-
   return (
     <Tab.Navigator
       initialRouteName="Home"
@@ -73,7 +73,26 @@ const BottomTabNavigation = () => {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
-              name={focused ? "chatbubble-ellipses" : "chatbubble-ellipses-outline"}
+              name={
+                focused ? "chatbubble-ellipses" : "chatbubble-ellipses-outline"
+              }
+              color={focused ? COLORS.red : COLORS.gray}
+              size={26}
+            />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Daily Diary"
+        component={Daily}
+        options={{
+          tabBarStyle: tabBarStyle,
+          tabBarShowLabel: false,
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={focused ? "calendar" : "calendar-outline"}
               color={focused ? COLORS.red : COLORS.gray}
               size={26}
             />
