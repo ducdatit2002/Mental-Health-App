@@ -50,12 +50,11 @@ const Chat = ({ title, content }) => {
     name: "Đạt Phạm",
     time: "4 hour ago",
     status: "Có cách nào để duy trì tinh thần tích cực và giảm lo âu không?",
-  },
-  
+  }
 ];
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       {/* Chat Section */}
       <Text style={styles.title}>{title}</Text>
       <Text>{content}</Text>
@@ -84,7 +83,8 @@ const Chat = ({ title, content }) => {
           </TouchableOpacity>
         ))}
       </View>
-      {/* Status Post Section */}
+      <ScrollView>
+        {/* Status Post Section */}
       {statusPostData.map((postData, index) => (
         <StatusPost
           key={index}
@@ -94,7 +94,8 @@ const Chat = ({ title, content }) => {
           status={postData.status}
         />
       ))}
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 
@@ -132,7 +133,7 @@ const styles = StyleSheet.create({
   },
   postContainer: {
     backgroundColor: "#fff",
-    padding: 16,
+    padding: 10,
     marginTop: 16,
   },
   headerContainer: {
